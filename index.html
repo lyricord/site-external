@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社リリコード｜奏でた物語は絆となる</title>
+<meta name="description" content="株式会社リリコード（Lyricord）は、大切な人が生きた証を一冊の物語として届ける会社です。あなたの言葉から物語を紡ぎ、温かくお届けします。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="株式会社リリコード">
+<meta property="og:title" content="株式会社リリコード｜奏でた物語は絆となる">
+<meta property="og:description" content="大切な人が生きた証を、一冊の物語に。あなたの言葉から物語を紡ぎ、温かくお届けします。">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf8f4;
+    --bg-soft:#f2ede4;
+    --ink:#2c2824;
+    --muted:#6b625a;
+    --line:#e3dbcd;
+    --accent:#a8814f;
+    --accent-deep:#8a6636;
+    --accent-ink:#6f4f28;
+    --serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;
+    --sans:"Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,"Noto Sans JP",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  [id]{scroll-margin-top:80px}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.9;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,248,244,.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:var(--serif);font-size:20px;letter-spacing:.08em;color:var(--ink);text-decoration:none}
+  .menu{display:flex;gap:28px;list-style:none}
+  .menu a{color:var(--muted);text-decoration:none;font-size:14px;letter-spacing:.04em;transition:color .2s}
+  .menu a:hover{color:var(--accent-deep)}
+  .menu-toggle{display:none}
+
+  /* hero */
+  .hero{padding:120px 0 110px;text-align:center;position:relative;overflow:hidden}
+  .hero .lyre{font-size:30px;color:var(--accent);letter-spacing:.3em;margin-bottom:24px}
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(30px,5.4vw,52px);
+    line-height:1.5;
+    letter-spacing:.06em;
+    margin-bottom:26px;
+  }
+  .hero p.lead{
+    font-size:clamp(15px,2.4vw,18px);
+    color:var(--muted);
+    max-width:640px;margin:0 auto;letter-spacing:.03em;
+  }
+  .hero .tagline{
+    display:inline-block;margin-top:38px;
+    font-family:var(--serif);font-size:15px;letter-spacing:.2em;color:var(--accent-deep);
+    padding:10px 24px;border:1px solid var(--line);border-radius:999px;background:var(--bg-soft);
+  }
+
+  /* sections */
+  section{padding:88px 0}
+  section.alt{background:var(--bg-soft)}
+  .sec-head{text-align:center;margin-bottom:56px}
+  .sec-head .en{display:block;font-size:12px;letter-spacing:.32em;color:var(--accent-ink);text-transform:uppercase;margin-bottom:14px}
+  .sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(24px,4vw,32px);letter-spacing:.06em}
+  .sec-head p{margin-top:16px;color:var(--muted);font-size:15px}
+
+  /* about / mvv */
+  .origin{max-width:720px;margin:0 auto 56px;text-align:center;color:var(--muted);font-size:16px}
+  .origin strong{color:var(--ink);font-family:var(--serif)}
+  .mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .mvv .card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:34px 26px;text-align:center}
+  section.alt .mvv .card{background:#fff}
+  .mvv .k{font-family:var(--serif);font-size:13px;letter-spacing:.28em;color:var(--accent-ink);margin-bottom:16px}
+  .mvv .v{font-size:15px;color:var(--ink);line-height:1.95}
+
+  /* 事業領域 */
+  .areas{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:700px;margin:0 auto}
+  .area{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:30px 26px}
+  section.alt .area{background:#fff}
+  .area .tag{font-size:12px;letter-spacing:.16em;color:var(--accent-ink);margin-bottom:10px}
+  .area h3{font-family:var(--serif);font-size:19px;letter-spacing:.06em;margin-bottom:12px}
+  .area p{font-size:14px;color:var(--muted)}
+
+  /* 書籍ができるまで */
+  .edges{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .edge{padding:30px 26px;border-top:2px solid var(--accent);background:var(--bg)}
+  section.alt .edge{background:#fff}
+  .edge .num{font-family:var(--serif);font-size:26px;color:var(--accent);margin-bottom:10px}
+  .edge h3{font-size:16px;margin-bottom:12px;letter-spacing:.04em}
+  .edge p{font-size:14px;color:var(--muted)}
+
+  /* 会社概要 */
+  .profile{max-width:760px;margin:0 auto;width:100%;border-collapse:collapse}
+  .profile th,.profile td{text-align:left;padding:18px 8px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
+  .profile th{width:190px;font-weight:600;color:var(--accent-deep);font-family:var(--serif);letter-spacing:.04em}
+  .profile td{color:var(--ink)}
+  .profile a{color:var(--accent-deep)}
+
+  /* contact */
+  .contact{text-align:center}
+  .contact p{color:var(--muted);margin-bottom:28px}
+  .btn{
+    display:inline-block;font-family:var(--serif);letter-spacing:.1em;
+    padding:15px 40px;border:1px solid var(--accent);border-radius:999px;
+    color:var(--accent-deep);text-decoration:none;transition:all .2s;background:transparent;
+  }
+  .btn:hover{background:var(--accent);color:#fff}
+
+  /* footer */
+  footer{background:var(--ink);color:#d9d1c6;padding:48px 0;text-align:center}
+  footer .fbrand{font-family:var(--serif);font-size:18px;letter-spacing:.12em;color:#fff;margin-bottom:10px}
+  footer small{display:block;color:#9a9086;font-size:12px;letter-spacing:.04em;line-height:1.9}
+
+  @media(max-width:860px){
+    .mvv,.areas,.edges{grid-template-columns:1fr}
+    .menu{
+      position:fixed;inset:64px 0 auto 0;flex-direction:column;gap:0;
+      background:var(--bg);border-bottom:1px solid var(--line);
+      max-height:0;overflow:hidden;transition:max-height .3s;
+    }
+    .menu.open{max-height:340px}
+    .menu li{border-top:1px solid var(--line)}
+    .menu a{display:block;padding:16px 24px}
+    .menu-toggle{display:block;background:none;border:none;font-size:24px;color:var(--ink);cursor:pointer;line-height:1}
+    .profile th{width:120px}
+    section{padding:64px 0}
+    .hero{padding:88px 0 80px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">リリコード</a>
+    <button class="menu-toggle" aria-label="メニュー" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <ul class="menu" id="menu" onclick="this.classList.remove('open')">
+      <li><a href="#about">私たちについて</a></li>
+      <li><a href="#areas">事業領域</a></li>
+      <li><a href="#book">書籍ができるまで</a></li>
+      <li><a href="#profile">会社概要</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>大切な人が、確かにここにいた。<br>その物語を、一冊に。</h1>
+      <p class="lead">ご本人やご家族からお聞きしたお話をもとに、その人が歩んできた人生を一冊の物語に。ページをめくるたび、そばに感じられる一冊を、心を込めてお届けします。</p>
+      <div class="tagline">奏でた物語は絆となる</div>
+    </div>
+  </section>
+
+  <!-- ABOUT / MVV -->
+  <section id="about" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="en">About</span>
+        <h2>私たちについて</h2>
+      </div>
+      <p class="origin">
+        <strong>Lyricord（リリコード）</strong> ——  Lyric（言葉）× Cord（絆）。<br>
+        言葉は、語り継がれて初めて物語になる。大切な人が生きた証という言葉を、物語として奏でることで、それは心に残る絆となります。
+      </p>
+      <div class="mvv">
+        <div class="card">
+          <div class="k">MISSION</div>
+          <div class="v">身近な存在の生きた証を、<br>物語として届けること</div>
+        </div>
+        <div class="card">
+          <div class="k">VISION</div>
+          <div class="v">身近な存在が確かに生きていたと知ることで、その人が時を超えて受け継がれること</div>
+        </div>
+        <div class="card">
+          <div class="k">VALUE</div>
+          <div class="v">物語を丁寧に紡ぎ、<br>温かく手渡すこと</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 事業領域 -->
+  <section id="areas">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="en">Field</span>
+        <h2>事業領域</h2>
+        <p>大切な人の物語が、いちばん愛おしく感じられるとき。<br>これからを考える方と、大切な人を見送ったご家族に、そっと寄り添います。</p>
+      </div>
+      <div class="areas">
+        <div class="area">
+          <div class="tag">見送ったあとに</div>
+          <h3>遺族へ</h3>
+          <p>「もっと知りたかった」——そんな想いを抱くご家族へ。その人が確かに歩んだ日々を、一冊にのこします。</p>
+        </div>
+        <div class="area">
+          <div class="tag">これからのために</div>
+          <h3>終活する人へ</h3>
+          <p>自分の歩みを、大切な人に遺しておきたい。そう願う方へ。あなたが語るその人生を、一冊の物語に綴ります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 書籍ができるまで -->
+  <section id="book" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="en">Book</span>
+        <h2>一冊の書籍ができるまで</h2>
+        <p>お聞かせいただいたお話をもとに、その人の人となりを一冊に綴ります。<br>手にとって読み返すたび、そばに感じられる——そんな物語のかたちです。</p>
+      </div>
+      <div class="edges">
+        <div class="edge">
+          <div class="num">01</div>
+          <h3>お話を聴く</h3>
+          <p>大切な人との思い出を、丁寧におうかがいします。何気ないエピソードのひとつひとつが、物語のもとになります。</p>
+        </div>
+        <div class="edge">
+          <div class="num">02</div>
+          <h3>物語に綴る</h3>
+          <p>お聞きした思い出をもとに、その人らしさを一冊の書籍へと綴ります。ご納得いただけるまで、心を込めて仕上げます。</p>
+        </div>
+        <div class="edge">
+          <div class="num">03</div>
+          <h3>お手元へ</h3>
+          <p>できあがった一冊を、心を込めてお届けします。読み返すたび、そばに感じられる一冊に。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 会社概要 -->
+  <section id="profile">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="en">Company</span>
+        <h2>会社概要</h2>
+      </div>
+      <table class="profile">
+        <tr><th>会社名</th><td>株式会社リリコード</td></tr>
+        <tr><th>設立</th><td>2026年7月29日</td></tr>
+        <tr><th>資本金</th><td>100万円</td></tr>
+        <tr><th>事業内容</th><td>大切な人が生きた証を、一冊の物語として届けるサービスの企画・制作・提供</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section id="contact" class="alt">
+    <div class="wrap contact">
+      <div class="sec-head">
+        <span class="en">Contact</span>
+        <h2>お問い合わせ</h2>
+      </div>
+      <p>サービスやご相談のお問い合わせは、メールにて承っております。<br>どうぞお気軽にご連絡ください。</p>
+      <a class="btn" href="mailto:riricordo.07.29@gmail.com">メールで問い合わせる</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">リリコード</div>
+    <small>
+      奏でた物語は絆となる<br>
+      © 2026 株式会社リリコード（Lyricord Inc.）
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>
