@@ -1,5 +1,0 @@
-# GitHub Pages (Jekyll) 設定
-# 公開サイトに配信したくないファイルを除外する。
-# ※ CNAME はカスタムドメインに必要なため除外しない。
-exclude:
-  - README.md

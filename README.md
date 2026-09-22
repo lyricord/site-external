@@ -2,7 +2,9 @@
 
 株式会社リリコード（Lyricord Inc.）の公式コーポレートサイト。GitHub Pages で公開する静的サイト。
 
-- **正本**: [`index.html`](index.html)（単一ファイル・依存なし）
+- **正本**: [`docs/index.html`](docs/index.html)（単一ファイル・依存なし）
+- **公開ソース**: GitHub Pages の Source を `main` ブランチの **`/docs`** フォルダに設定（`docs/` 配下だけを配信するため、この `README.md` はサイトに公開されない）
+- **カスタムドメイン**: [`docs/CNAME`](docs/CNAME)（`lyricord.co.jp`）
 - **内容の出典**: `lyricord-executive/context`（事業設計書・サービス仕様・名刺 ほか）
 - **参考デザイン**: [asaty94/lyrecord-site](https://github.com/asaty94/lyrecord-site) のトーン＆マナーを踏襲
 
@@ -18,8 +20,8 @@
 ## 公開手順（GitHub Pages）
 
 1. このリポジトリ（`lyricord/site-external`）に push する。
-2. GitHub の **Settings → Pages** で、Source を `Deploy from a branch` にし、Branch を `main` / `/ (root)` に設定する。
-3. 数分後、発行された URL で公開される。独自ドメイン（`lyricord.co.jp`）を使う場合は Pages の Custom domain と `CNAME` を別途設定する。
+2. GitHub の **Settings → Pages** で、Source を `Deploy from a branch` にし、Branch を `main` / **`/docs`** に設定する。
+3. 数分後、発行された URL で公開される。独自ドメイン（`lyricord.co.jp`）は `docs/CNAME` と Pages の Custom domain で設定済み。
 
 ## 編集メモ
 
